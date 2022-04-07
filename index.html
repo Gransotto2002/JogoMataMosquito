@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Mata Mosquito!</title>
+</head>
+<body>
+  
+  <div class="container">
+  
+    <img src="img/game.png" class="gameover">
+
+
+    <select class="select" id="nivel">
+      <option value="" selected>-- Selecione o nível --</option>
+      <option value="normal">Normal</option>
+      <option value="dificil">Dificil</option>
+      <option value="impossible">Chuck Noris</option>
+    </select>
+
+    <button type="submit" class="btn" onclick="dificuldade()" >Iniciar Game</button>
+  </div>
+  <script>
+
+    function dificuldade(){
+    var dificuldade = document.getElementById('nivel').value
+      if(dificuldade === ''){
+        alert('selecione o nível para jogar')
+        return false
+      }else{
+        window.location.href = 'jogo.html?' + dificuldade
+      }
+}
+  </script>
+</body>
+</html>
